@@ -46,10 +46,10 @@ void menu() {
     int escolha;
     
     printf("Escolha uma operação matemática:\n");
-    printf("\t1- Soma\n");
-    printf("\t2- Subtração\n");
-    printf("\t3- Divisão\n");
-    printf("\t4- Multiplicação\n");
+    printf("\t1. Soma\n");
+    printf("\t2. Subtração\n");
+    printf("\t3. Divisão\n");
+    printf("\t4. Multiplicação\n");
     
     printf("Escolha o número da operação: ");
     scanf ("%d", &escolha);
