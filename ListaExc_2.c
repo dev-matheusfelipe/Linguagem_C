@@ -63,3 +63,47 @@ int main()
 
 // EXERCÍCIO  3
 
+#include <stdio.h>
+
+int main()
+{
+   int total = 0;
+   int positivos = 0;
+   int negativos = 0;
+   
+   float n = 0;
+   float somatorio = 0, media = 0;
+   
+   printf("Digite quantos números quiser, para finalizar o calculo digite 0.");
+   
+   while(1){
+       
+       printf("\nDigite um número: ");
+       scanf("%f", &n);
+       
+       if(n != 0){
+           if(n > 0){
+               positivos++;
+           } else {
+               negativos++;
+               somatorio += n;
+               total++;
+           }
+       } else {
+           break;
+       }
+       
+   }
+   
+   media = somatorio / total;
+   
+   printf("Média: %.2f\n", media);
+   printf("Pos.: Foram digitados %d números Pos.  -  %.2f%% de números Pos.\n", positivos, (float) positivos / total);
+   printf("Neg.: Foram digitados %d números Neg  -  %.2f%% de números Neg.\n", negativos, (float) negativos / total);
+
+    return 0;
+}
+
+//===================================================================================================//
+
+// EXERCÍCIO  4
