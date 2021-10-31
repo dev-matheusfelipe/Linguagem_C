@@ -25,3 +25,41 @@ void main(int argc, char **argv)
 
 
 // EXERCÍCIO  2
+
+#include<stdio.h>
+int main()
+{
+    float altura, guardaMaior, guardaMenor;
+    int i;
+
+    printf("Digite a altura de 15 pessoas do grupo \n");
+    printf("Digite a 1º altura: ");
+    scanf("%f", &altura);
+
+    guardaMaior=altura;
+    guardaMenor=altura;
+
+    for(i=1; i<15; i++) {
+        
+        printf("\nDigite a %dº altura: ",i+1);
+        scanf("%f", &altura);
+        
+        if(altura>guardaMaior){
+            guardaMaior=altura;
+        } else {
+            if(altura<guardaMenor) {
+                guardaMenor=altura;
+            }
+        }
+    }
+
+    printf("\nO menor altura do grupo: %.2f", guardaMenor);
+    printf("\nO maior altura do grupo: %.2f", guardaMaior);
+
+ return 0;
+} 
+
+//===================================================================================================//
+
+// EXERCÍCIO  3
+
