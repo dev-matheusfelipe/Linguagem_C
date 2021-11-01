@@ -61,4 +61,36 @@ int main()
 
 //  Exercício - 3
 
+#include <stdio.h>
 
+int main()
+{
+    
+    int dias = 365;
+    int meses = 12;
+    int semanas = 52;
+    int anoNasc;
+    int anoAtual;
+    int idade;
+
+    
+    printf("Digite o ano de nascimento: ");
+    scanf("%i", &anoNasc);
+    
+    printf("Digite o ano atual: ");
+    scanf("%i", &anoAtual);
+    
+    idade = anoAtual - anoNasc;
+    meses = idade * meses;
+    dias = idade * dias;
+    semanas = idade * semanas;
+    
+    printf("A idade em anos é: %i", idade);
+    printf("\nSua idade em meses é: %i", meses);
+    printf("\nSua idade em semanas é: %i", semanas);
+    printf("\nSua Idade em dias é: %i", dias);
+
+    
+    return 0;
+
+}
