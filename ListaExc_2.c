@@ -170,3 +170,24 @@ int main(){
 // EXERCÍCIO  5
 
 
+
+//===================================================================================================//
+
+// EXERCÍCIO  6
+
+#include <stdio.h>
+
+void main(int argc, char **argv)
+{
+
+    int i,soma=0;
+
+    for(i = 100; i <= 200; i++)
+    {
+        if(i%2 != 0)
+        {
+           soma=soma+i;
+           printf("\n i: %d", i);
+        }
+    }
+}
