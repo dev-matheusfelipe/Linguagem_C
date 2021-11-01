@@ -114,7 +114,7 @@ int main()
 
 int main(){
     
-    int n=0; 
+    int n=0;
     int cont=0;
     int seq1=0;
     int seq2=0; 
@@ -155,11 +155,11 @@ int main(){
         
     }
     
-    printf("\nO total de números digitados: %d", cont);
     printf("\nDe  0 á  25: %d", seq1);
     printf("\nDe 26 á  50: %d", seq2);
     printf("\nDe 51 á  75: %d", seq3);
     printf("\nDe 76 á 100: %d", seq4);
+    printf("\nNúmero negativo digitado: %d", cont);
     
     return 0;
     
