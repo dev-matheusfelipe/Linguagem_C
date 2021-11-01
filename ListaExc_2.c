@@ -107,3 +107,66 @@ int main()
 //===================================================================================================//
 
 // EXERCÍCIO  4
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    
+    int n=0; 
+    int cont=0;
+    int seq1=0;
+    int seq2=0; 
+    int seq3=0; 
+    int seq4=0;
+    
+    printf("Quantos números serão digitados: ");
+    scanf("%i", &cont);
+    
+    for (int i=0; i<cont; i++) {
+        
+        printf("Digite um número: ");
+        scanf("%d", &n);
+        
+        if (n<0) {
+            i=cont;
+        }
+        
+        if ((n>=0) && (n<=25)) {
+            
+            seq1++;
+            
+        } else if ((n>=26) && (n<=50)) {
+            
+            seq2++;
+            
+        } else if ((n>51) && (n<=75)) {
+            
+            seq3++;   
+            
+        } else if ((n>=76) && (n<=100)) {
+            
+            seq4++;
+            
+        }
+        
+        n=0;
+        
+    }
+    
+    printf("\nO total de números digitados: %d", cont);
+    printf("\nDe  0 á  25: %d", seq1);
+    printf("\nDe 26 á  50: %d", seq2);
+    printf("\nDe 51 á  75: %d", seq3);
+    printf("\nDe 76 á 100: %d", seq4);
+    
+    return 0;
+    
+}
+
+//===================================================================================================//
+
+// EXERCÍCIO  5
+
+
