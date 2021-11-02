@@ -2,6 +2,11 @@
 
 // EXERCÍCIO  1 
 
+// Pergunta exercício 1
+//Desenvolver um algoritmo que efetue a soma de todos os números ímpares que são múltiplos de
+//três e que se encontram no conjunto dos números de 1 até 500.
+
+// Resposta exercício 1
 #include <stdio.h>
 
 void main(int argc, char **argv)
@@ -26,7 +31,14 @@ void main(int argc, char **argv)
 
 // EXERCÍCIO  2
 
+// Pergunta exercício 2
+//Desenvolver um algoritmo que leia a altura de 15 pessoas. Este programa deverá calcular e mostrar:
+//a. A menor altura do grupo;
+//b. A maior altura do grupo;
+
+// Resposta exercício 2
 #include<stdio.h>
+
 int main()
 {
     float altura, guardaMaior, guardaMenor;
@@ -63,6 +75,12 @@ int main()
 
 // EXERCÍCIO  3
 
+// Pergunta exercício 3
+//Desenvolver um algoritmo que leia um número não determinado de valores e calcule e escreva a
+//média aritmética dos valores lidos, a quantidade de valores positivos, a quantidade de valores
+//negativos e o percentual de valores negativos e positivos. 
+
+// Resposta exercício 3
 #include <stdio.h>
 
 int main()
@@ -108,6 +126,12 @@ int main()
 
 // EXERCÍCIO  4
 
+// Pergunta exercício 4
+//Escrever um algoritmo que leia uma quantidade desconhecida de números e conte quantos deles
+//estão nos seguintes intervalos: [0-25], [26-50], [51-75] e [76-100]. A entrada de dados deve
+//terminar quando for lido um número negativo. 
+
+// Resposta exercício 4
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -169,12 +193,22 @@ int main(){
 
 // EXERCÍCIO  5
 
+// Pergunta exercício 5
+//Faça um algoritmo estruturado que leia uma quantidade não determinada de números positivos.
+//Calcule a quantidade de números pares e ímpares, a média de valores pares e a média geral dos
+//números lidos. O número que encerrará a leitura será zero. 
+    
+// Resposta exercício 5
 
 
 //===================================================================================================//
 
 // EXERCÍCIO  6
 
+// Pergunta exercício 6
+//Escrever um algoritmo que gera e escreve os números ímpares entre 100 e 200. 
+
+// Resposta exercício 6
 #include <stdio.h>
 
 void main(int argc, char **argv)
@@ -191,3 +225,13 @@ void main(int argc, char **argv)
         }
     }
 }
+
+//===================================================================================================//
+
+// EXERCÍCIO  7
+
+// Pergunta exercício 7
+//Escrever um algoritmo que leia um valor para uma variável N de 1 a 10 e calcule a tabuada de N.
+//Mostre a tabuada na forma: 0 x N = 0, 1 x N = 1N, 2 x N = 2N, ..., 10 x N = 10N. 
+
+// Resposta exercício 7
