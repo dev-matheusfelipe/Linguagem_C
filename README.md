@@ -1,2 +1,3 @@
 # Linguagem_C
-Estudo da linguagem C
+Estudando  linguagem de programação C
+Studying C programming language
