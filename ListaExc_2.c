@@ -17,7 +17,7 @@ void main(int argc, char **argv)
            printf("\n i: %d", i);
         }
     }
-    printf("\n A soma de todos os numeros ímpares e multiplos de 3 entre 0 e 500: %d", soma);
+    printf("\n A soma de todos os numeros ímpares e multiplos de 3 entre 1 a 500 é: %d", soma);
 }
 
 
