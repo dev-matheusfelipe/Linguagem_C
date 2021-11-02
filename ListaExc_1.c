@@ -1,7 +1,15 @@
 //Lista de Exercícios - Algoritmos
 
-//  Exercício - 1
+// EXERCÍCIO  1 
 
+// Pergunta exercício 1
+//O proprietário da empresa ABC LTDA precisa de um programa de computador para
+//calcular o novo salário que seus funcionários irão receber a partir do mês que vem.
+//Sabendo que o aumento de salário para todos os funcionários será de 25%, faça um
+//programa que lê o valor do salário atual do funcionário e informa o seu novo salário
+//acrescido de 25%.
+
+// Resposta exercício 1
 #include <stdio.h>
 
 int main()
@@ -30,6 +38,15 @@ int main()
 
 //  Exercício - 2
 
+// Pergunta exercício 2
+//Um dos sócios da empresa XYZ LTDA ficou sabendo que você desenvolveu um
+//programa de reajuste salarial para a empresa ABC LTDA e pediu que você desenvolva
+//um programa similar. Na verdade ele está pedindo que você acrescente ao programa
+//anterior à possibilidade dele informar não somente o salário atual do funcionário, mas
+//também o valor percentual que deve ser incrementado para aquele funcionário, pois
+//ele irá aplicar valores percentuais diferentes a cada funcionário.
+
+// Resposta exercício 2
 #include <stdio.h>
 
 int main()
@@ -61,6 +78,12 @@ int main()
 
 //  Exercício - 3
 
+// Pergunta exercício 3
+//Crie um programa que lê o ano de nascimento de uma pessoa e o ano atual. Calcule e
+//mostre qual é: a idade da pessoa em anos, a idade da pessoa em meses, a idade da
+//pessoa em dias e a idade da pessoa em semanas.
+    
+// Resposta exercício 3
 #include <stdio.h>
 
 int main()
@@ -94,3 +117,16 @@ int main()
     return 0;
 
 }
+
+//===========================================================================================================================================//
+
+//  Exercício - 4
+
+// Pergunta exercício 4
+//Pedro comprou um saco de ração com peso em quilos. Ele possui dois gatos, para os
+//quais fornece a quantidade de ração em gramas. A quantidade diária de ração
+//fornecida para cada gato é sempre a mesma. Faça um programa que receba o peso do
+//saco de ração e a quantidade de ração fornecida para cada gato, calcule e mostre
+//quanto restará de ração no saco após cinco dias.
+    
+// Resposta exercício 4
