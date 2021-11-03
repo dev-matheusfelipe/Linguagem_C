@@ -130,7 +130,26 @@ int main()
 //quanto restará de ração no saco após cinco dias.
     
 // Resposta exercício 4
+#include <stdio.h>
 
+int main()
+{
+    float pesoSaco;
+    float racaoPorDia;
+    float quantRestante;
+    
+    printf("Informe o peso do saco de racao em Kg: ");
+    scanf("%f",&pesoSaco);
+    
+    printf("\nInforme a quantidade diaria consumida em gramas: ");
+    scanf("%f",&racaoPorDia);
+    
+    quantRestante = pesoSaco - ((racaoPorDia*2*5)/1000);
+    
+    printf("\nA quantidade restante de racao é: %0.2fKg\n",quantRestante);
+    
+    return 0;
+}
 
 //===========================================================================================================================================//
 
