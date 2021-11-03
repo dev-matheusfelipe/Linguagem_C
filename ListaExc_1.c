@@ -130,3 +130,40 @@ int main()
 //quanto restará de ração no saco após cinco dias.
     
 // Resposta exercício 4
+
+
+//===========================================================================================================================================//
+
+//  Exercício - 5
+
+// Pergunta exercício 5
+
+// Resposta exercício 5
+#include <stdio.h>
+
+int main()
+{
+    int A, B;
+    int QuardA;
+    
+    printf("Digite o valor de A: ");
+    scanf("%i", &A);
+    
+    printf("\nDigite o valor de B: ");
+    scanf("%i", &B);
+    
+    printf("\n\tO valor de A é: %i", A);
+    printf("\n\tO valor de B é: %i", B);
+    
+    QuardA = A;
+    
+    A = B;
+    
+    B = QuardA;
+    
+    
+    printf("\n\n\tO valor de A é: %i", A);
+    printf("\n\tO valor de B é: %i", B);
+    
+    return 0;
+}
