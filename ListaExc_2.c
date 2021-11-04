@@ -41,7 +41,9 @@ void main(int argc, char **argv)
 
 int main()
 {
-    float altura, guardaMaior, guardaMenor;
+    float altura;
+    float guardaMaior = 1.82;
+    float guardaMenor = 1.49;
     int i;
 
     printf("Digite a altura de 15 pessoas do grupo \n");
@@ -51,7 +53,7 @@ int main()
     guardaMaior=altura;
     guardaMenor=altura;
 
-    for(i=1; i<15; i++) {
+    for(i=1; i<5; i++) {
         
         printf("\nDigite a %dº altura: ",i+1);
         scanf("%f", &altura);
@@ -69,7 +71,7 @@ int main()
     printf("\nO maior altura do grupo: %.2f", guardaMaior);
 
  return 0;
-} 
+}
 
 //===================================================================================================//
 
