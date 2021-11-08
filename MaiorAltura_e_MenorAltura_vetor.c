@@ -3,11 +3,11 @@
 int main()
 {
    int i;
-   float altura[5];
+   float altura[15];
    float maior = 0;
    float menor = 1000;
    
-   for(i=0; i<5; i++) {
+   for(i=0; i<15; i++) {
        
        printf("Digite a altura da pessoa %i: ",i+1);
        scanf("%f",&altura[i]);
