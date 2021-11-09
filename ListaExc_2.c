@@ -273,6 +273,7 @@ contendo 10 valores.*/
 /*Escreva um algoritmo que leia um valor inicial A e uma razão R e imprima uma seqüência em P.G.
 contendo 10 valores.*/
 
+// Resposta exercício 9
 
 //===================================================================================================//
 
@@ -281,3 +282,7 @@ contendo 10 valores.*/
 // Pergunta exercício 9
 /*Escreva um algoritmo que leia um valor inicial A e imprima a seqüência de valores do cálculo
 de A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2 X 1 = 120 */
+
+//===========================================================================================================================================//
+
+// Fim
