@@ -201,7 +201,41 @@ Calcule a quantidade de números pares e ímpares, a média de valores pares e a
 números lidos. O número que encerrará a leitura será zero. */
     
 // Resposta exercício 5
+#include <stdio.h>
 
+int main()
+{
+    int num, pares, impa;
+    float media;
+    int resp;
+    
+    while(1){
+       
+       printf("\nDigite um número: ");
+       scanf("%f", &n);
+       
+       if(n != 0){
+           if(n%2 == 0){
+               pares++;
+           } else {
+               impa++;
+               somatorio += n;
+               total++;
+           }
+       } else {
+           break;
+       }
+       
+   }
+   
+   media = somatorio / total;
+   
+   printf("Média: %.2f\n", media);
+   printf("Pos.: Foram digitados %d números Pos.  -  %.2f%% de números Pos.\n", positivos, (float) positivos / total);
+   printf("Neg.: Foram digitados %d números Neg  -  %.2f%% de números Neg.\n", negativos, (float) negativos / total);
+
+    return 0;
+}
 
 //===================================================================================================//
 
