@@ -237,3 +237,27 @@ void main(int argc, char **argv)
 //Mostre a tabuada na forma: 0 x N = 0, 1 x N = 1N, 2 x N = 2N, ..., 10 x N = 10N. 
 
 // Resposta exercício 7
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main()
+{
+    int tabuada = 0;
+    int x;
+    printf("\nDigite a tabuada que você deseja: ");
+    scanf("%d", &tabuada);
+
+    for(x = 1; x<=10; x++){
+        //1 x 5 = 5
+        printf("%dx%d = %i\n", x, tabuada, x * tabuada);
+    }
+
+    return 0;
+}
+
+//===================================================================================================//
+
+// EXERCÍCIO  8
+
+// Pergunta exercício 8
