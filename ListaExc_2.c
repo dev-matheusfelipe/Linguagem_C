@@ -264,6 +264,7 @@ int main()
 /*Escreva um algoritmo que leia um valor inicial A e uma razão R e imprima uma seqüência em P.A.
 contendo 10 valores.*/
 
+// Resposta exercício 8
 
 //===================================================================================================//
 
@@ -277,11 +278,13 @@ contendo 10 valores.*/
 
 //===================================================================================================//
 
-// EXERCÍCIO  9
+// EXERCÍCIO  10
 
-// Pergunta exercício 9
+// Pergunta exercício 10
 /*Escreva um algoritmo que leia um valor inicial A e imprima a seqüência de valores do cálculo
 de A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2 X 1 = 120 */
+
+// Resposta exercício 10
 
 //===========================================================================================================================================//
 
