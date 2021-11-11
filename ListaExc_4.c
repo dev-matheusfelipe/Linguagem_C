@@ -189,7 +189,6 @@ int main()
     int DgnPrincipal_soma[0][0];
     // variaveis Diagonal Secundária
     int DgnSecundaria_soma[0][0];
-    // variaveis Todos os elementos
     
     // Escreve uma mensagem para o usuario
     printf("Digite o valor para os elementos da matriz: ");
@@ -197,7 +196,9 @@ int main()
     // Recebimento dos valores para cada elemento
     for (i=0; i<6; i++) {
         for (j=0; j<6; j++) {
+            // Escreve uma mensagem para o usuario
             printf("\nElemento[%d][%d]=", i, j);
+            // Ler o valor ditado pelo usuario
             scanf("%d", &A[i][j]);
         }
     }
@@ -243,6 +244,53 @@ int main()
 linha 5 e da coluna 3. */
 
 // Resposta exercício 5
+#include <stdio.h>
+
+int main ()
+{
+    // variaveis
+    int A[7][6];
+    int i, j;
+    // variaveis linha 5
+    int linha5_soma[0][0];
+    // variaveis coluna 3
+    int Coluna3_soma[0][0];
+
+    // Escreve uma mensagem para o usuario
+    printf ("Digite o valor para os elementos da matriz: ");
+
+    // Recebimento dos valores para cada elemento
+    for (i = 0; i < 7; i++) {
+        for (j = 0; j < 6; j++) {
+            // Escreve uma mensagem para o usuario
+	        printf ("\nElemento[%d][%d]=", i, j);
+	        // Ler o valor ditado pelo usuario
+	        scanf ("%d", &A[i][j]);
+	    }
+    }
+
+    // Exemplo da matriz
+    /*  ...X..   
+        ...X..
+        ...X..
+        ...X..
+        ...X..
+        XXXXXX
+        ...X..   */
+
+    // Soma linha 5
+    linha5_soma[0][0] = A[5][0] + A[5][1] + A[5][2] + A[5][3] + A[5][4] + A[5][5];
+    // Soma coluna 3
+    Coluna3_soma[0][0] = A[0][3] + A[1][3] + A[2][3] + A[3][3] + A[4][3] + A[5][3] + A[6][3];
+
+    // Retorna na tela a soma linha 5
+    printf ("\nA soma da soma linha 5 é: %d", linha5_soma[0][0]);
+    // Retorna na tela a soma coluna 3
+    printf ("\nA soma da soma coluna 3 é %d", Coluna3_soma[0][0]);
+
+
+  return 0;
+}
 
 //===========================================================================================================================================//
 
