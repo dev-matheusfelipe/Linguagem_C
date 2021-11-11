@@ -40,7 +40,7 @@ X. Utilizar estruturas de repetição.
 int main()
 {
     // variaveis
-    int A[5][5];
+    int A[4][4];
     int i, j, resp;
     int exp_1_soma1[0][0], exp_1_soma2[0][0];
     int exp_2_soma1[0][0], exp_2_soma2[0][0];
@@ -51,8 +51,8 @@ int main()
     printf("Digite o valor para os elementos da matriz: ");
     
     // Recebimento dos valores para cada elemento
-    for (i=0; i<5; i++) {
-        for (j=0; j<5; j++) {
+    for (i=0; i<4; i++) {
+        for (j=0; j<4; j++) {
             printf("\nElemento[%d][%d]=", i, j);
             scanf("%d", &A[i][j]);
         }
