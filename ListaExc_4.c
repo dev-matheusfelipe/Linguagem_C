@@ -20,6 +20,58 @@ Linha 3 Coluna 2 Diagonal Principal Diagonal Secundária Todos os elementos
  .....    ..X..          ....X              X....                XXXXX     */
 
 // Resposta exercício 1
+#include <stdio.h>
+
+int main()
+{
+    // variaveis
+    int M[5][5];
+    int i, j;
+    // variaveis Linha 3
+    int linha3_soma[0][0];
+    // variaveis Coluna 2
+    int Coluna2_soma[0][0];
+    // variaveis Diagonal Principal
+    int DgnPrincipal_soma[0][0];
+    // variaveis Diagonal Secundária
+    int DgnSecundaria_soma[0][0];
+    // variaveis Todos os elementos
+    int soma;
+    
+    // Pede para o usuario digitar os valores na tela
+    printf("Digite o valor para os elementos da matriz: ");
+    
+    // Recebimento dos valores para cada elemento
+    for (i=0; i<5; i++) {
+        for (j=0; j<5; j++) {
+            printf("\nElemento[%d][%d]=", i, j);
+            scanf("%d", &M[i][j]);
+            soma += M[i][j]; //Soma Todos os elementos
+        }
+    }
+    
+    // Soma linha 3
+    linha3_soma[0][0] = M[3][0] + M[3][1] + M[3][2] + M[3][3] + M[3][4];
+    // Soma Coluna 2
+    Coluna2_soma[0][0] = M[0][2] + M[1][2] + M[2][2] + M[3][2] + M[4][2];
+    // Soma Diagonal Principal
+    DgnPrincipal_soma[0][0] = M[0][0] + M[1][1] + M[2][2] + M[3][3] + M[4][4];
+    // Soma Diagonal Secundária
+    DgnSecundaria_soma[0][0] = M[0][4] + M[1][3] + M[2][2] + M[3][1] + M[4][0];
+    
+    // Retorna na tela a soma linha 3
+    printf("\nA soma da linha 3 é: %d", linha3_soma[0][0]);
+    // Retorna na tela a soma Coluna 2
+    printf("\nA soma da Coluna 2 é: %d", Coluna2_soma[0][0]);
+    // Retorna na tela a soma Diagonal Principal
+    printf("\nA soma Diagonal Principal é: %d", DgnPrincipal_soma[0][0]);
+    // Retorna na tela a soma Diagonal Secundária
+    printf("\nA soma Diagonal Secundária é: %d", DgnSecundaria_soma[0][0]);
+    // Retorna na tela a soma Todos os elementos
+    printf("\nA soma de todos os elementos é: %d", soma);
+    
+    return 0;
+}
 
 //===========================================================================================================================================//
 
@@ -90,7 +142,8 @@ int main()
 // EXERCÍCIO  3
 
 // Pergunta exercício 3
-
+/*Faça uma função que recebe uma matriz A[5][5] e retorna a soma dos seus elementos.*/
+ 
 // Resposta exercício 3
 
 //===========================================================================================================================================//
