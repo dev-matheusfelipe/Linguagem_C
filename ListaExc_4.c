@@ -33,23 +33,26 @@ X. Utilizar estruturas de repetição.
  XX..  || ....  || XX..  || ..XX
  ....  || ..XX  || XXX.  || ...X
  ....  || ..XX  || XXXX  || ....  */
+
 // Resposta exercício 2
 #include <stdio.h>
 
 int main()
 {
-    
-    int A[4][4];
+    // variaveis
+    int A[5][5];
     int i, j, resp;
     int exp_1_soma1[0][0], exp_1_soma2[0][0];
     int exp_2_soma1[0][0], exp_2_soma2[0][0];
     int exp_3_soma1[0][0], exp_3_soma2[0][0], exp_3_soma3[0][0], exp_3_soma4[0][0];
     int exp_4_soma1[0][0], exp_4_soma2[0][0], exp_4_soma3[0][0];
     
+    // Pede para o usuario digitar os valores na tela
     printf("Digite o valor para os elementos da matriz: ");
     
-    for (i=0; i<4; i++) {
-        for (j=0; j<4; j++) {
+    // Recebimento dos valores para cada elemento
+    for (i=0; i<5; i++) {
+        for (j=0; j<5; j++) {
             printf("\nElemento[%d][%d]=", i, j);
             scanf("%d", &A[i][j]);
         }
@@ -76,6 +79,7 @@ int main()
     exp_3_soma1[0][0] + exp_3_soma2[0][0] + exp_3_soma3[0][0] + exp_3_soma4[0][0] +
     exp_4_soma1[0][0] + exp_4_soma2[0][0] + exp_4_soma3[0][0];
     
+    // Retorna na tela a soma de todos os elementos da matriz
     printf("A soma das matrizes é: %d", resp);
     
     return 0;
