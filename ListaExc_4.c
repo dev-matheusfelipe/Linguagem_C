@@ -38,7 +38,7 @@ int main()
     // variaveis Todos os elementos
     int soma;
     
-    // Pede para o usuario digitar os valores na tela
+    // Escreve uma mensagem para o usuario
     printf("Digite o valor para os elementos da matriz: ");
     
     // Recebimento dos valores para cada elemento
@@ -99,7 +99,7 @@ int main()
     int exp_3_soma1[0][0], exp_3_soma2[0][0], exp_3_soma3[0][0], exp_3_soma4[0][0];
     int exp_4_soma1[0][0], exp_4_soma2[0][0], exp_4_soma3[0][0];
     
-    // Pede para o usuario digitar os valores na tela
+     // Escreve uma mensagem para o usuario
     printf("Digite o valor para os elementos da matriz: ");
     
     // Recebimento dos valores para cada elemento
@@ -145,20 +145,102 @@ int main()
 /*Faça uma função que recebe uma matriz A[5][5] e retorna a soma dos seus elementos.*/
  
 // Resposta exercício 3
+#include <stdio.h>
+
+int main()
+{
+    // variaveis
+    int A[5][5];
+    int a,b;
+    int soma;
+    
+    for (a=0; a<5; a++) {
+        for (b=0; b<5; b++) {
+            // Escreve uma mensagem para o usuario
+            printf("Digite o valor para o Elemento[%d][%d] = ", a, b);
+            // Ler o valor ditado pelo usuario
+            scanf("%d", &A[a][b]);
+            soma += A[a][b];  // soma todos os elementos digitados
+        }
+    }
+    
+    printf("\nA soma de todos os elementos é: %d", soma);
+
+    return 0;
+}
 
 //===========================================================================================================================================//
 
 // EXERCÍCIO  4
 
 // Pergunta exercício 4
+/*Faça uma função que recebe uma matriz A[6][6] e retorna a soma dos elementos da
+sua diagonal principal e da sua diagonal secundária */
 
 // Resposta exercício 4
+#include <stdio.h>
+
+int main()
+{
+    // variaveis
+    int A[6][6];
+    int i, j;
+    // variaveis Diagonal Principal
+    int DgnPrincipal_soma[0][0];
+    // variaveis Diagonal Secundária
+    int DgnSecundaria_soma[0][0];
+    // variaveis Todos os elementos
+    
+    // Escreve uma mensagem para o usuario
+    printf("Digite o valor para os elementos da matriz: ");
+    
+    // Recebimento dos valores para cada elemento
+    for (i=0; i<6; i++) {
+        for (j=0; j<6; j++) {
+            printf("\nElemento[%d][%d]=", i, j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+    
+    // Exemplo da matriz Diagonal Principal
+    /*  X.....
+        .X....
+        ..X...
+        ...X..
+        ....X.
+        .....X   */
+        
+    // Exemplo da matriz Diagonal Secundária
+    /*
+        .....X
+        ....X.
+        ...X..
+        ..X...
+        .X....
+        X.....  */
+
+    
+    // Soma Diagonal Principal
+    DgnPrincipal_soma[0][0] = A[0][0] + A[1][1] + A[2][2] + A[3][3] + A[4][4] + A[5][5];
+    // Soma Diagonal Secundária
+    DgnSecundaria_soma[0][0] = A[0][5] + A[1][4] + A[2][3] + A[3][2] + A[4][1] + A[5][0];
+    
+    // Retorna na tela a soma Diagonal Principal
+    printf("\nA soma Diagonal Principal é: %d", DgnPrincipal_soma[0][0]);
+    // Retorna na tela a soma Diagonal Secundária
+    printf("\nA soma Diagonal Secundária é: %d", DgnSecundaria_soma[0][0]);
+
+    
+    return 0;
+}
 
 //===========================================================================================================================================//
 
 // EXERCÍCIO  5
 
 // Pergunta exercício 5
+/* Faça uma função que recebe uma matriz A[7][6] e retorna a soma dos elementos da
+linha 5 e da coluna 3. */
 
 // Resposta exercício 5
 
@@ -167,6 +249,8 @@ int main()
 // EXERCÍCIO  6
 
 // Pergunta exercício 6
+/* Faça uma função que recebe uma matriz A[6][6] e retorna o menor elemento da sua
+diagonal secundária. */
 
 // Resposta exercício 6
 
@@ -175,7 +259,10 @@ int main()
 // EXERCÍCIO  7 
 
 // Pergunta exercício 7
-
+/* Faça uma função que recebe uma matriz A[8][8] e calcula o maior elemento da sua
+diagonal principal. A seguir, a função deve dividir todos os elementos de A pelo maior
+encontrado. A função deve retornar a matriz alterada. */
+ 
 // Resposta exercício 7
 
 //===========================================================================================================================================//
