@@ -87,6 +87,35 @@ int main()
 // Pergunta exercício 4
 
 // Resposta exercício 4
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int i, cont=0;
+    char vet[3];
+    
+    printf("*** Digite 10 palavras ***\n");
+    
+    for (i=0; i<3; i++) {
+        printf ("Digite a %dº palavra: ", i+1);
+        scanf("%s", &vet[i]);
+    }
+
+    for(i=0; i<3; i++) {
+        
+        if( vet[i] != 'a' || vet[i] != 'e' || vet[i] != 'i' || vet[i] != 'o' || vet[i] != 'u') {
+            cont ++;
+        }
+    }
+    
+    printf ("A quatidade de consoantes foram: %d\n", cont);
+    printf ("%s", vet[i]);
+    
+    return 0;
+
+}
 
 //===========================================================================================================================================//
 
