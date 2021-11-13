@@ -85,8 +85,11 @@ int main()
 // EXERCÍCIO  4
 
 // Pergunta exercício 4
+/*Faça um Programa que leia um vetor de 10 caracteres, e diga quantas
+consoantes foram lidas. Imprima as consoantes.  */
 
 // Resposta exercício 4
+//  ************INCOMPLETO********************* \\
 #include <stdio.h>
 #include <stdlib.h>
 
