@@ -205,34 +205,37 @@ números lidos. O número que encerrará a leitura será zero. */
 
 int main()
 {
-    int num, pares, impa;
-    float media;
-    int resp;
+    int valorGeral =0,
+        valorPar = 0,
+        numero = 1,
+        resto = 0,
+        qtdpar = 0,
+        qtdimpar = 0,
+        contador = 0;
+        
+        
+    while ( numero != 0 ) {
+        
+        ++contador;
+        
+        printf("\nDigite um número: ");
+        scanf("%d", &numero);
+        
+        valorGeral += numero;
+        
+        resto = numero%2;
+        
+        if(resto == 0) {
+            valorPar += numero;
+            qtdpar++;
+        } else {
+            qtdimpar++;
+        }
+        
+    }
     
-    while(1){
-       
-       printf("\nDigite um número: ");
-       scanf("%f", &n);
-       
-       if(n != 0){
-           if(n%2 == 0){
-               pares++;
-           } else {
-               impa++;
-               somatorio += n;
-               total++;
-           }
-       } else {
-           break;
-       }
-       
-   }
-   
-   media = somatorio / total;
-   
-   printf("Média: %.2f\n", media);
-   printf("Pos.: Foram digitados %d números Pos.  -  %.2f%% de números Pos.\n", positivos, (float) positivos / total);
-   printf("Neg.: Foram digitados %d números Neg  -  %.2f%% de números Neg.\n", negativos, (float) negativos / total);
+    printf("\nA média dos valores pares é: %d", (valorPar / qtdpar));
+    printf("\nA média dos valores Gerais são: %d", (valorGeral / (qtdpar+qtdimpar)));
 
     return 0;
 }
