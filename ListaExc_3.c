@@ -122,14 +122,59 @@ int main()
 // EXERCÍCIO  5
 
 // Pergunta exercício 5
-
+/* Faça um Programa que leia 20 números inteiros e armazene-os num vetor.
+Armazene os números pares no vetor PAR e os números IMPARES no vetor
+ímpar. Imprima os três vetores. */
+    
 // Resposta exercício 5
+#include <stdio.h>
+
+int main() {
+   
+   
+    int vet[20],a=0,b=0,c=0;
+    int impar[10];
+    int par[10];
+
+
+    for(c=0; c<20; c++) {
+        printf("Digite o %dº numeros:", c+1);
+        scanf("%d", &vet[c]);
+        
+        if(vet[c] %2 == 0){
+            par[a] = vet[c];
+            a++;
+        }else {
+            impar[b] = vet[c];
+            b++;
+        }
+    }
+
+    printf("\n\nVetor original:\n");
+    for(c=0; c<20; c++) {
+        printf("%d. ",vet[c]);
+    }
+    
+    printf("\n\nVetor impar:\n");
+    for(c=0; c<10; c++) {
+        printf("%d. ",impar[c]);
+    }
+
+    printf("\n\nVetor par:\n");
+    for(c=0; c<10; c++) {
+        printf("%d. ",par[c]);
+    }
+
+}
 
 //===========================================================================================================================================//
 
 // EXERCÍCIO  6
 
 // Pergunta exercício 6
+/* Faça um Programa que peça as quatro notas de 10 alunos, calcule e
+armazene num vetor a média de cada aluno, imprima o número de alunos com
+média maior ou igual a 7.0. */
 
 // Resposta exercício 6
 
