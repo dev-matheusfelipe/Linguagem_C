@@ -190,6 +190,31 @@ média maior ou igual a 7.0. */
 a multiplicação e os números. */
 
 // Resposta exercício 7
+#include <stdio.h>
+
+int main()
+{
+
+    int valor[5], i, c, soma=0, mult=0;
+    
+    for(i=0; i<5; i++)
+    {
+        printf("Digite o %dº valor: ", i+1);
+        scanf("%d", &valor[i]);
+        soma=soma+valor[i];
+    }
+    
+    mult = valor[4] * valor[3] * valor[2] * valor[1];
+    
+    printf("\nValores digitados:\n");
+    for(c=0; c<5; c++) {
+        printf("%d. ",valor[c]);
+    }
+    printf("\n\nO valor somado é: %d", soma);
+    printf("\nO valor multiplicado é: %d", mult);
+    
+    return 0;
+}
 
 //===========================================================================================================================================//
 
@@ -201,6 +226,36 @@ informação no seu respectivo vetor. Imprima a idade e a altura na ordem invers
 a ordem lida.  */
 
 // Resposta exercício 8
+#include <stdio.h>
+
+int main()
+{
+
+    int idade[5];
+    float altura[5];
+    int i;
+    
+    for (i=0; i<=5; i++) {
+      // Inicializando o vetor com zeros
+      idade[i] = 0;
+      altura[i] = 0;
+    }
+    
+    for(i=0; i<5; i++)
+    {
+        printf("Digite a idade da %dº pessoa: ", i+1);
+        scanf("%d", &idade[i]);
+        printf("Digite a altura da %dº pessoa: ", i+1);
+        scanf("%f", &altura[i]);
+    }
+    
+    printf("\nValores digitados:\n");
+    for(i=0; i<5; i++) {
+        printf("altura: %0.2f idade: %d \n",altura[i], idade[i]);
+    }
+    
+    return 0;
+}
 
 //===========================================================================================================================================//
 
