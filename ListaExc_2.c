@@ -354,6 +354,7 @@ contendo 10 valores.*/
 de A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2 X 1 = 120 */
 
 // Resposta exercício 10
+//  ************INCOMPLETO********************* \\
 #include <stdio.h>
 
 int main()
