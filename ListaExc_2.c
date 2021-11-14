@@ -275,8 +275,6 @@ Mostre a tabuada na forma: 0 x N = 0, 1 x N = 1N, 2 x N = 2N, ..., 10 x N = 10N.
 
 // Resposta exercício 7
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 
 int main()
 {
@@ -285,7 +283,7 @@ int main()
     printf("\nDigite a tabuada que você deseja: ");
     scanf("%d", &tabuada);
 
-    for(x = 1; x<=10; x++){
+    for(x = 0; x<=10; x++){
         //1 x 5 = 5
         printf("%dx%d = %i\n", x, tabuada, x * tabuada);
     }
@@ -302,6 +300,40 @@ int main()
 contendo 10 valores.*/
 
 // Resposta exercício 8
+#include <stdio.h>
+
+void main()
+{
+    //Declaração das variáveis
+    int resposta = 0, nro = 0;
+    
+    //Pergunta ao usuário o valor inicial
+    printf("Digite o valor inicial: \n");
+    
+    //Armazena a resposta na variável
+    scanf("%i", &resposta);
+
+    //Este loop atribui o valor da resposta a variável i
+    for(int i = resposta; i > 0 ; )
+    {
+        //Aqui é reduzido o valor da variável i
+        --i;
+
+        //Caso o valor da variável nro seja 0 é realizado a primeira conta        
+        if(nro == 0) {
+            nro  = resposta * i;
+        }
+        /*Caso as variáveis de nro e i sejam diferentes de 0 o cáculo prossegue
+          Verifica-se a variável de i = 0 somente para evitar que a conta nro * 0 atribua 0 a variável nro antes de exibir a mensagem*/
+        else if(i !=0 ){
+            nro  = nro * i; 
+        }   
+    }
+    
+    //Exibe o valor da conta resposta * (resposta -1) ...etc ...
+    printf("\nResultado: %i", nro);      
+    printf("\n.....FIM.....");
+}
 
 //===================================================================================================//
 
@@ -322,6 +354,23 @@ contendo 10 valores.*/
 de A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2 X 1 = 120 */
 
 // Resposta exercício 10
+#include <stdio.h>
+
+int main()
+{
+    int i,a;
+    
+    printf("Digite um valor: ");
+    scanf("%d", &a);
+    
+    for ( i=a; i>0; i--) {
+        
+        printf("%d. ", i);
+        
+    }
+
+    return 0;
+}
 
 //===========================================================================================================================================//
 
