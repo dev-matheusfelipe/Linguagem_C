@@ -304,6 +304,75 @@ contendo 10 valores.*/
 
 void main()
 {
+   
+    int valorinicial  = 0;
+    int razao          = 0;
+    
+    //Valor inicical A
+	printf("\nDigite o inicial: ");
+	scanf("%d", &valorinicial);
+
+    //Valor da razão
+	printf("\nDigite a razão: ");
+	scanf("%d", &razao);
+
+    //Cálculo da progressão aritmica até 10
+	for(int x = 10; x > 0; x--){
+        
+        valorinicial += razao;
+	    printf("\n%d", valorinicial);		    
+	    
+	}
+}
+
+//===================================================================================================//
+
+// EXERCÍCIO  9
+
+// Pergunta exercício 9
+/*Escreva um algoritmo que leia um valor inicial A e uma razão R e imprima uma seqüência em P.G.
+contendo 10 valores.*/
+
+// Resposta exercício 9
+#include <stdio.h>
+
+void main()
+{
+   
+    int valorinicial = 0;
+    int razao= 0;
+    
+    //Valor inicical A
+	printf("\nDigite o inicial: ");
+	scanf("%d", &valorinicial);
+
+    //Valor da razão
+	printf("\nDigite a razão: ");
+	scanf("%d", &razao);
+
+    //Cálculo da progressão geométrica até 10
+	for(int x = 10; x > 0; x--){
+        
+        valorinicial *= razao;
+	    printf("%d ", valorinicial);
+	    
+	}
+	
+}
+
+//===================================================================================================//
+
+// EXERCÍCIO  10
+
+// Pergunta exercício 10
+/*Escreva um algoritmo que leia um valor inicial A e imprima a seqüência de valores do cálculo
+de A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2 X 1 = 120 */
+
+// Resposta exercício 10
+#include <stdio.h>
+
+void main()
+{
     //Declaração das variáveis
     int resposta = 0, nro = 0;
     
@@ -333,44 +402,6 @@ void main()
     //Exibe o valor da conta resposta * (resposta -1) ...etc ...
     printf("\nResultado: %i", nro);      
     printf("\n.....FIM.....");
-}
-
-//===================================================================================================//
-
-// EXERCÍCIO  9
-
-// Pergunta exercício 9
-/*Escreva um algoritmo que leia um valor inicial A e uma razão R e imprima uma seqüência em P.G.
-contendo 10 valores.*/
-
-// Resposta exercício 9
-
-//===================================================================================================//
-
-// EXERCÍCIO  10
-
-// Pergunta exercício 10
-/*Escreva um algoritmo que leia um valor inicial A e imprima a seqüência de valores do cálculo
-de A! e o seu resultado. Ex: 5! = 5 X 4 X 3 X 2 X 1 = 120 */
-
-// Resposta exercício 10
-//  ************INCOMPLETO********************* \\
-#include <stdio.h>
-
-int main()
-{
-    int i,a;
-    
-    printf("Digite um valor: ");
-    scanf("%d", &a);
-    
-    for ( i=a; i>0; i--) {
-        
-        printf("%d. ", i);
-        
-    }
-
-    return 0;
 }
 
 //===========================================================================================================================================//
