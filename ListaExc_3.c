@@ -266,6 +266,26 @@ int main()
 mostre a soma dos quadrados dos elementos do vetor. */
  
 // Resposta exercício 9
+#include <stdio.h>
+
+int main()
+{
+    int A[0], i;
+    int soma=0;
+    
+    for(i=0; 1<10; i++) {
+        printf("\nDigite um numero: ");
+        scanf("%d", &A[i]);
+    }
+    
+    for(i=0; i<10; i++) {
+        soma = soma + (A[i]*A[i]);
+    }
+    
+    print("\nA soma dos quadrados dos elementos do vetor é: %d", soma);
+
+    return 0;
+}
 
 //===========================================================================================================================================//
 
@@ -277,6 +297,62 @@ terceiro vetor de 20 elementos, cujos valores deverão ser compostos pelos
 elementos intercalados dos dois outros vetores. */ 
 
 // Resposta exercício 10
+#include <stdio.h>
+
+int main()
+{
+    int vet1[10], vet2[10], vet3[20];
+    int i;
+    
+    //Ler valores para o primeiro vetor
+    for(i=0; i<10; i++) {
+        printf("Digite um numero: ");
+        scanf("%i", &vet1[i]);
+    }
+    printf("\n");
+    
+    //Ler valores para o segundo vetor
+    for(i=0; i<10; i++) {
+        printf("Digite um numero: ");
+        scanf("%i", &vet2[i]);
+    }
+    printf("\n");
+    
+    //mostra valores para o primeiro vetor
+    printf("Vetor 1: \n");
+    for (i=0; i<10; i++) {
+        printf("%i ", vet1[i]);
+    }
+    printf("\n");
+    
+    //mostra valores para o segundo vetor
+    printf("Vetor 2: \n");
+    for (i=0; i<10; i++) {
+        printf("%i ", vet2[i]);
+    }
+    printf("\n");
+    
+    //Preencher o terceiro vetor
+    //[0 1 2]
+    //[0 1 2]
+    //[0 0 1 1 2 2]
+    //[0 1 2 3 4 5]
+    for (i=0; i<10; i++) {
+        vet3[i*2] = vet1[i];
+    }
+    
+    for (i=0; i<10; i++) {
+        vet3[i*2+1] = vet2[i];
+    }
+
+    //mostra valores para o terceiro vetor
+    printf("Vetor 3: \n");
+    for (i=0; i<20; i++) {
+        printf("%i ", vet3[i]);
+    }
+
+    return 0;
+}
 
 //===========================================================================================================================================//
 
