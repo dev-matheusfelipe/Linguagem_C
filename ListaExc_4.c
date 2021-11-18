@@ -301,6 +301,52 @@ int main ()
 diagonal secundária. */
 
 // Resposta exercício 6
+#include<stdio.h>
+
+    // Exemplo da matriz Diagonal Principal
+    /*  X.....
+        .X....
+        ..X...
+        ...X..
+        ....X.
+        .....X   */
+
+int main()
+{
+    // variaveis
+    int A[6][6];
+    int guardaMaior=0;
+    int guardaMenor=1;
+    int i,j;
+    
+    // Recebimento dos valores para cada elemento
+    for(i=0; i<6; i++) 
+    {
+        for(j=0; j<6; j++) 
+        {
+            printf("Digite um valor para A[%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
+            
+            if(A[i][j]>guardaMaior)
+            {
+                guardaMaior=A[i][j];
+            } else 
+            {
+                if(A[i][j]<guardaMenor)
+                {
+                    guardaMenor=A[i][j];
+                }
+            }
+        }
+    }
+    
+    // Escreve uma mensagem para o usuario
+    printf("\nO menor digitado foi: %d", guardaMenor);
+    printf("\nO maior digitado foi: %d", guardaMaior);
+
+ return 0;
+}
+
 
 //===========================================================================================================================================//
 
