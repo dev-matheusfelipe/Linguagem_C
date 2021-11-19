@@ -393,7 +393,7 @@ void main()
         somar = somar + altura[i];
     }
 	  
-	//Calcula a média  das alturas  
+    //Calcula a média  das alturas  
     mediaAltura = (somar/10);
 
     //Ese for vai pecorrer o vetor de 10 posições
