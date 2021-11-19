@@ -373,6 +373,41 @@ determine quantos alunos com mais de 13 anos possuem altura inferior à média
 de altura desses alunos. */ 
 
 // Resposta exercício 12
+#include <stdio.h>
+
+void main()
+{
+    //Declarando o vetor das idades com tamanho de 10 já com valores preenchidos (para colocar 30 idades basta aumentar o tamanho do vetor e inserir os valores dentro do vetor)
+    int idade[10]      = {10, 15, 9, 22, 13, 12, 14, 30, 29, 11};
+    
+    //Declarando o vetor das alturas com tamanho de 10 já com valores preenchidos  (para colocar 30 tamanhos basta aumentar o tamanho do vetor e inserir os valores dentro do vetor)
+    float altura[10]  = {1.60, 1.35, 1.76, 1.98, 1.77, 1.66, 1.80, 2.00, 1.30, 2.30};
+
+    //Declaração de variáveis comuns
+    float mediaAltura  = 0.0;
+    float somar        = 0.0;
+    int qtdMaiorTreze   = 0;
+
+    //Somar as alturas
+    for(int i = 0; i < 10; i++){
+        somar = somar + altura[i];
+    }
+	  
+	//Calcula a média  das alturas  
+    mediaAltura = (somar/10);
+
+    //Ese for vai pecorrer o vetor de 10 posições
+    for(int i = 0; i < 10; i++)
+    {
+        //Verifica se a idade é maior que 13 anos e a altura dos que maiores de 13 que possuem um tamanho inferior a média
+        if(idade[i] > 13 && altura[i] < mediaAltura)
+            qtdMaiorTreze = qtdMaiorTreze + 1;
+    }
+    
+    //Exibe a quantidade de alunos com mais de 13 anoe e menor que a média
+    printf("%i alunos possuem mais de 13 anos e altura inferior a  média de altura dos demais alunos \n", qtdMaiorTreze);
+}
+
 
 //===========================================================================================================================================//
 
