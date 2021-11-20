@@ -308,9 +308,9 @@ int main ()
     Coluna3_soma[0][0] = A[0][3] + A[1][3] + A[2][3] + A[3][3] + A[4][3] + A[5][3] + A[6][3];
 
     // Retorna na tela a soma linha 5
-    printf ("\nA soma da soma linha 5 é: %d", linha5_soma[0][0]);
+    printf("\nA soma da soma linha 5 é: %d", linha5_soma[0][0]);
     // Retorna na tela a soma coluna 3
-    printf ("\nA soma da soma coluna 3 é %d", Coluna3_soma[0][0]);
+    printf("\nA soma da soma coluna 3 é %d", Coluna3_soma[0][0]);
 
 
   return 0;
