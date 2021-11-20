@@ -180,6 +180,37 @@ armazene num vetor a média de cada aluno, imprima o número de alunos com
 média maior ou igual a 7.0. */
 
 // Resposta exercício 6
+#include <stdio.h>
+
+int main()
+{
+    float notas[4];
+    float media[10];
+    float soma = 0;
+    int contador = 0;
+    int i,j;
+    
+    for(i=0; i<10; i++) {
+        printf("\nInforme as notas do aluno %i \n", i+1);
+        for(j=0; j<4; j++) {
+            printf("Nota %i: ", j+1);
+            scanf("%f", &notas[j]);
+            soma = soma + notas[j];
+        }   
+        
+        media[i] = soma / 4;
+        printf("\nA media do aluno %i é: %0.2f", i+1, media[i]);
+        
+        if(media[i] >= 7) {
+            contador++;
+        }
+        soma = 0;
+    }
+    
+    printf("\nQuantidade de alunos com notas >= a 7 é: %i", contador);
+    
+    return 0;
+}
 
 //===========================================================================================================================================//
 
@@ -407,7 +438,6 @@ void main()
     //Exibe a quantidade de alunos com mais de 13 anoe e menor que a média
     printf("%i alunos possuem mais de 13 anos e altura inferior a  média de altura dos demais alunos \n", qtdMaiorTreze);
 }
-
 
 //===========================================================================================================================================//
 
