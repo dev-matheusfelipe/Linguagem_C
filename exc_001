@@ -1,0 +1,60 @@
+//Considerando a, b, c e d como variáveis com valores iniciais iguais a 5, 7, 3 e 9, respectivamente, assinale a opção correta.
+//A O resultado da expressão (a != 3 || b < 10 || c == 5) é falso.  Errado!
+//B O resultado da expressão (d > 8 && c == 3 || a >= 10) é verdadeiro.  certo!
+//C O resultado da expressão (d == 12 && a != 10) é falso. Certo!
+//D O resultado da expressão (c == 4 || d <=6) && (a >= 5 && b !=9) || ( ! (a < 5) ) é falso. errado!
+//E O resultado da expressão (a == 3 || b > 10 || d == 8 ) é verdadeiro. errado!
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a=5;
+    int b=7;
+    int c=3;
+    int d=9;
+    
+    
+    if (a != 3 || b < 10 || c == 5) {
+         printf("\nQuestão (a) é verdadeiro!");
+    } else {
+        printf("\nQuestão (a) é falso!");
+    }
+    
+    
+    /*
+    if (d > 8 && c == 3 || a >= 10) {
+        printf("\nQuestão (b) é verdadeiro!");
+    } else {
+        printf("\nQuestão (b) é falso!");
+    }
+    */
+    
+    /*
+    if ((d == 12) && (a != 10)) {
+        printf("\nQuestão (c) é verdadeiro!");
+    } else {
+        printf("\nQuestão (c) é falso!");
+    } 
+    */
+    
+    /*
+    if ((c == 4) || (d <=6) && (a >= 5) && (b !=9) || ( ! (a < 5) )) {
+        printf("\nQuestão (d) é verdadeiro!");
+    } else {
+        printf("\nQuestão (d) é falso!");
+    }
+    */
+    
+    
+    /*
+    if ((a == 3) || (b > 10) || (d == 8 )) {
+        printf("\nQuestão (e) é verdadeiro!");
+    } else {
+        printf("\nQuestão (e) é falso!");
+    }
+    */
+
+    return 0;
+}
