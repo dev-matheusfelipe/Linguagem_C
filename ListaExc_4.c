@@ -145,6 +145,61 @@ int main()
 /*Faça uma função que recebe uma matriz A[5][5] e retorna a soma dos seus elementos.*/
  
 // Resposta exercício 3
+#include <stdio.h>
+#include <stdlib.h>
+
+/*int somaMatriz(int matriz[5][5]) {
+    
+    int soma = 0;
+    int l;
+    int c;
+    int tam = 5;
+    
+    for(l = 0; l < tam; l++){
+        for(c = 0;  c< tam; c++){
+          soma = soma + matriz[l][c];  
+        }
+    }
+    
+    return soma; 
+}*/
+
+int main() {
+
+    int tam = 5;
+    int l, c, matriz[tam][tam];
+    int soma = 0;
+
+    // preenche a matriz gerando valores aleatórios
+    for(l = 0; l < tam; l++){
+        for(c = 0;  c< tam; c++){
+            
+            matriz[l][c] = rand() % 10;
+            
+        }
+    }
+  
+    // imprime a matriz na tela
+    for(l = 0; l < tam; l++){
+        for(c = 0;  c< tam; c++){
+            printf("%d ", matriz[l][c]);
+        }
+        printf("\n");
+    }
+    
+    
+    for(l = 0; l < tam; l++){
+        for(c = 0;  c< tam; c++){
+          soma = soma + matriz[l][c];  
+        }
+    }
+    //soma = somaMatriz(matriz[5][5]);
+    
+    printf("O valor da soma dos elementos da matriz é: %i", soma);
+    
+    return 0 ;
+    
+}
 
 //===========================================================================================================================================//
 
