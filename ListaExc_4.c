@@ -148,22 +148,6 @@ int main()
 #include <stdio.h>
 #include <stdlib.h>
 
-/*int somaMatriz(int matriz[5][5]) {
-    
-    int soma = 0;
-    int l;
-    int c;
-    int tam = 5;
-    
-    for(l = 0; l < tam; l++){
-        for(c = 0;  c< tam; c++){
-          soma = soma + matriz[l][c];  
-        }
-    }
-    
-    return soma; 
-}*/
-
 int main() {
 
     int tam = 5;
@@ -193,8 +177,7 @@ int main() {
           soma = soma + matriz[l][c];  
         }
     }
-    //soma = somaMatriz(matriz[5][5]);
-    
+
     printf("O valor da soma dos elementos da matriz é: %i", soma);
     
     return 0 ;
@@ -223,16 +206,25 @@ int main()
     int DgnSecundaria_soma[0][0];
     
     // Escreve uma mensagem para o usuario
-    printf("Digite o valor para os elementos da matriz: ");
+    printf("Digite o valor para os elementos da matriz: \n");
     
     // Recebimento dos valores para cada elemento
     for (i=0; i<6; i++) {
         for (j=0; j<6; j++) {
             // Escreve uma mensagem para o usuario
-            printf("\nElemento[%d][%d]=", i, j);
+            printf("Elemento[%d][%d]=", i, j);
             // Ler o valor ditado pelo usuario
             scanf("%d", &A[i][j]);
         }
+    }
+    printf("\n");
+    
+    // imprime a matriz na tela
+    for(i=0; i<6; i++){
+        for(j=0; j<6; j++){
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
     }
     
     // Exemplo da matriz Diagonal Principal
