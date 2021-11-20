@@ -145,29 +145,6 @@ int main()
 /*Faça uma função que recebe uma matriz A[5][5] e retorna a soma dos seus elementos.*/
  
 // Resposta exercício 3
-#include <stdio.h>
-
-int main()
-{
-    // variaveis
-    int A[5][5];
-    int a,b;
-    int soma;
-    
-    for (a=0; a<5; a++) {
-        for (b=0; b<5; b++) {
-            // Escreve uma mensagem para o usuario
-            printf("Digite o valor para o Elemento[%d][%d] = ", a, b);
-            // Ler o valor ditado pelo usuario
-            scanf("%d", &A[a][b]);
-            soma += A[a][b];  // soma todos os elementos digitados
-        }
-    }
-    
-    printf("\nA soma de todos os elementos é: %d", soma);
-
-    return 0;
-}
 
 //===========================================================================================================================================//
 
