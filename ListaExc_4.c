@@ -382,6 +382,55 @@ diagonal principal. A seguir, a função deve dividir todos os elementos de A pe
 encontrado. A função deve retornar a matriz alterada. */
  
 // Resposta exercício 7
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    // variaveis
+    int A[8][8];
+    int guardaMaior=0;
+    int soma=0;
+    int reslt=0;
+    int i,j;
+    
+    // preenche a matriz gerando valores aleatórios
+    for(i=0; i<8; i++){
+        for(j=0;  j<8; j++){
+            //Gera numeros aleatorios para a matriz
+            A[i][j] = rand() % 10;
+            //Soma cada elemento da matriz
+            soma = soma + A[i][j];
+            //Verifica os numeros digitados somente na matriz Diagonal Principal
+            if( (A[0][0]) && (A[1][1]) && (A[2][2]) && (A[3][3]) && (A[4][4]) && (A[5][5]) && (A[6][6]) && (A[7][7]) > guardaMaior)
+            {
+                guardaMaior=A[i][j];
+            }
+        }
+    }
+    
+    //imprime a matriz completa na tela
+    for(i=0; i<8; i++){
+        for(j=0; j<8; j++){
+            printf("%d ", A[i][j]);
+        }
+        //Quebra uma linha
+        printf("\n");
+    }
+    
+    //imprime a matriz Diagonal Principal na tela
+    printf("%d %d %d %d %d %d %d %d", A[0][0], A[1][1], A[2][2], A[3][3], A[4][4], A[5][5], A[6][6], A[7][7]);
+    //Quebra uma linha
+    printf("\n");
+    
+    //Essa linha pega a soma da matriz e divide pelo maior numero encontrado na Diagonal Principal
+    reslt = soma/guardaMaior;
+    
+    //Escreve uma mensagem para o usuario
+    printf("\nO maior numero encontrado foi: %d \nA matriz gerada divida pelo maior numero e: %d",guardaMaior, reslt);
+
+    return 0;
+}
 
 //===========================================================================================================================================//
 
