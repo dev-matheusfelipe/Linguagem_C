@@ -171,7 +171,6 @@ int main() {
         printf("\n");
     }
     
-    
     for(l = 0; l < tam; l++){
         for(c = 0;  c< tam; c++){
           soma = soma + matriz[l][c];  
@@ -181,7 +180,6 @@ int main() {
     printf("O valor da soma dos elementos da matriz é: %i", soma);
     
     return 0 ;
-    
 }
 
 //===========================================================================================================================================//
@@ -194,40 +192,36 @@ sua diagonal principal e da sua diagonal secundária */
 
 // Resposta exercício 4
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
+int main ()
 {
-    // variaveis
+   //variavel matriz
     int A[6][6];
+    //variaveis do for
     int i, j;
-    // variaveis Diagonal Principal
+    //variaveis Diagonal Principal
     int DgnPrincipal_soma[0][0];
-    // variaveis Diagonal Secundária
+    //variaveis Diagonal Secundária
     int DgnSecundaria_soma[0][0];
     
-    // Escreve uma mensagem para o usuario
-    printf("Digite o valor para os elementos da matriz: \n");
-    
-    // Recebimento dos valores para cada elemento
+    //Recebimento dos valores para cada elemento
     for (i=0; i<6; i++) {
         for (j=0; j<6; j++) {
-            // Escreve uma mensagem para o usuario
-            printf("Elemento[%d][%d]=", i, j);
-            // Ler o valor ditado pelo usuario
-            scanf("%d", &A[i][j]);
+            A[i][j] = rand() % 10;
         }
     }
-    printf("\n");
     
-    // imprime a matriz na tela
+    //imprime a matriz na tela
     for(i=0; i<6; i++){
         for(j=0; j<6; j++){
             printf("%d ", A[i][j]);
         }
+        //Quebra uma linha
         printf("\n");
     }
     
-    // Exemplo da matriz Diagonal Principal
+    //Exemplo da matriz Diagonal Principal
     /*  X.....
         .X....
         ..X...
@@ -235,7 +229,7 @@ int main()
         ....X.
         .....X   */
         
-    // Exemplo da matriz Diagonal Secundária
+    //Exemplo da matriz Diagonal Secundária
     /*
         .....X
         ....X.
@@ -243,19 +237,17 @@ int main()
         ..X...
         .X....
         X.....  */
-
     
-    // Soma Diagonal Principal
+    //Soma Diagonal Principal
     DgnPrincipal_soma[0][0] = A[0][0] + A[1][1] + A[2][2] + A[3][3] + A[4][4] + A[5][5];
-    // Soma Diagonal Secundária
+    //Soma Diagonal Secundária
     DgnSecundaria_soma[0][0] = A[0][5] + A[1][4] + A[2][3] + A[3][2] + A[4][1] + A[5][0];
     
-    // Retorna na tela a soma Diagonal Principal
+    //Retorna na tela a soma Diagonal Principal
     printf("\nA soma Diagonal Principal é: %d", DgnPrincipal_soma[0][0]);
-    // Retorna na tela a soma Diagonal Secundária
+    //Retorna na tela a soma Diagonal Secundária
     printf("\nA soma Diagonal Secundária é: %d", DgnSecundaria_soma[0][0]);
 
-    
     return 0;
 }
 
@@ -269,31 +261,26 @@ linha 5 e da coluna 3. */
 
 // Resposta exercício 5
 #include <stdio.h>
+#include <stdlib.h>
 
 int main ()
 {
-    // variaveis
+    //variaveis
     int A[7][6];
     int i, j;
-    // variaveis linha 5
+    //variaveis linha 5
     int linha5_soma[0][0];
-    // variaveis coluna 3
+    //variaveis coluna 3
     int Coluna3_soma[0][0];
 
-    // Escreve uma mensagem para o usuario
-    printf ("Digite o valor para os elementos da matriz: ");
-
-    // Recebimento dos valores para cada elemento
+    //preenche a matriz gerando valores aleatórios
     for (i = 0; i < 7; i++) {
         for (j = 0; j < 6; j++) {
-            // Escreve uma mensagem para o usuario
-	        printf ("\nElemento[%d][%d]=", i, j);
-	        // Ler o valor ditado pelo usuario
-	        scanf ("%d", &A[i][j]);
-	    }
+            A[i][j] = rand() % 10;
+        }
     }
 
-    // Exemplo da matriz
+    //Exemplo da matriz
     /*  ...X..   
         ...X..
         ...X..
@@ -301,6 +288,15 @@ int main ()
         ...X..
         XXXXXX
         ...X..   */
+    
+    //imprime a matriz completa na tela
+    for(i=0; i<7; i++){
+        for(j=0; j<6; j++){
+            printf("%d ", A[i][j]);
+        }
+        //Quebra uma linha
+        printf("\n");
+    }
 
     // Soma linha 5
     linha5_soma[0][0] = A[5][0] + A[5][1] + A[5][2] + A[5][3] + A[5][4] + A[5][5];
