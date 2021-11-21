@@ -313,7 +313,7 @@ int main()
         soma = soma + (A[i]*A[i]);
     }
     
-    print("\nA soma dos quadrados dos elementos do vetor é: %d", soma);
+    printf("\nA soma dos quadrados dos elementos do vetor é: %d", soma);
 
     return 0;
 }
