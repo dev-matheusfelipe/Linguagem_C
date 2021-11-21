@@ -304,7 +304,7 @@ int main()
     int A[0], i;
     int soma=0;
     
-    for(i=0; 1<10; i++) {
+    for(i=0; i<10; i++) {
         printf("\nDigite um numero: ");
         scanf("%d", &A[i]);
     }
