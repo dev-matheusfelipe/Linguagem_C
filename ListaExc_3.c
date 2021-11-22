@@ -408,34 +408,34 @@ de altura desses alunos. */
 
 void main()
 {
-    //Declarando o vetor das idades com tamanho de 10 já com valores preenchidos (para colocar 30 idades basta aumentar o tamanho do vetor e inserir os valores dentro do vetor)
-    int idade[10]      = {10, 15, 9, 22, 13, 12, 14, 30, 29, 11};
+    //Declarando o vetor das idades com tamanho de 30 
+    int idade[30]      = {10, 13, 27, 15, 12, 9, 11, 22, 13, 12, 13, 14, 30, 22, 30, 26, 53, 24, 32, 22, 35, 61, 41, 35, 32, 31, 40, 29, 11, 55 };
     
-    //Declarando o vetor das alturas com tamanho de 10 já com valores preenchidos  (para colocar 30 tamanhos basta aumentar o tamanho do vetor e inserir os valores dentro do vetor)
-    float altura[10]  = {1.60, 1.35, 1.76, 1.98, 1.77, 1.66, 1.80, 2.00, 1.30, 2.30};
+    //Declarando o vetor das alturas com tamanho de 30   
+    float altura[30]  = {1.60, 1.35, 1.76, 1.98, 1.77, 1.66, 1.80, 2.00, 1.30, 1.80, 2.03, 1.55, 1.20, 1.36, 1.41, 1.63, 1.33, 1.58, 1.18, 1.78, 1.95, 1.32, 2.01, 1.74, 1.89, 1.76, 1.65, 1.36, 1.95, 1.82 };
 
-    //Declaração de variáveis comuns
+    //Declaração de variáveis 
     float mediaAltura  = 0.0;
     float somar        = 0.0;
     int qtdMaiorTreze   = 0;
 
-    //Somar as alturas
-    for(int i = 0; i < 10; i++){
+    //Soma das alturas
+    for(int i = 0; i < 30; i++){
         somar = somar + altura[i];
     }
 	  
-    //Calcula a média  das alturas  
-    mediaAltura = (somar/10);
+    //Calculo da média  das alturas  
+    mediaAltura = (somar/30);
 
-    //Ese for vai pecorrer o vetor de 10 posições
-    for(int i = 0; i < 10; i++)
+    //Este for vai pecorre o vetor das 30 posições
+    for(int i = 0; i < 30; i++)
     {
         //Verifica se a idade é maior que 13 anos e a altura dos que maiores de 13 que possuem um tamanho inferior a média
         if(idade[i] > 13 && altura[i] < mediaAltura)
             qtdMaiorTreze = qtdMaiorTreze + 1;
     }
     
-    //Exibe a quantidade de alunos com mais de 13 anoe e menor que a média
+    //Exibe a quantidade de alunos com mais de 13 anos e menor que a média
     printf("%i alunos possuem mais de 13 anos e altura inferior a  média de altura dos demais alunos \n", qtdMaiorTreze);
 }
 
