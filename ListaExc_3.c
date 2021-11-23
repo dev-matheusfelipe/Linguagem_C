@@ -62,22 +62,28 @@ int main()
 
 // Resposta exercício 3
 #include <stdio.h>
+#include <stdlib.h>
 
-int main()
+void main()
 {
-    float soma, media[4];
-    int i;
+    int i = 0, cont = 0;
+    char *vetorYoda[10] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
     
-    for (i=0; i<4; i++) {
-        printf("Digite o valor da %dº nota: ", i+1);
-        scanf("%f", &media[i]);
-        soma += media[i];
+    for(; i < 10; i++) {
+        
+        if(vetorYoda[i] != "a" && 
+           vetorYoda[i] != "e" && 
+           vetorYoda[i] != "i" && 
+           vetorYoda[i] != "o" && 
+           vetorYoda[i] != "u")
+        {
+            cont++;
+            printf("%s ", vetorYoda[i]);            
+        }
     }
     
-    printf("\nValor da soma: %0.1f", soma);
-    printf("\nA media das notas é: %0.1f", soma/4);
-
-    return 0;
+    printf("\nA quatidade de consoantes foram: %d\n", cont);
+    
 }
 
 //===========================================================================================================================================//
