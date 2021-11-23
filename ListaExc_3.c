@@ -89,35 +89,28 @@ int main()
 consoantes foram lidas. Imprima as consoantes.  */
 
 // Resposta exercício 4
-//  ************INCOMPLETO********************* \\
-#include <stdio.h>
 #include <stdlib.h>
 
-int main()
+void main()
 {
-
-    int i, cont=0;
-    char vet[3];
+    int i = 0, cont = 0;
+    char *vetorYoda[10] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
     
-    printf("*** Digite 10 palavras ***\n");
-    
-    for (i=0; i<3; i++) {
-        printf ("Digite a %dº palavra: ", i+1);
-        scanf("%s", &vet[i]);
-    }
-
-    for(i=0; i<3; i++) {
+    for(; i < 10; i++) {
         
-        if( vet[i] != 'a' || vet[i] != 'e' || vet[i] != 'i' || vet[i] != 'o' || vet[i] != 'u') {
-            cont ++;
+        if(vetorYoda[i] != "a" && 
+           vetorYoda[i] != "e" && 
+           vetorYoda[i] != "i" && 
+           vetorYoda[i] != "o" && 
+           vetorYoda[i] != "u")
+        {
+            cont++;
+            printf("%s ", vetorYoda[i]);            
         }
     }
     
-    printf ("A quatidade de consoantes foram: %d\n", cont);
-    printf ("%s", vet[i]);
+    printf("\nA quatidade de consoantes foram: %d\n", cont);
     
-    return 0;
-
 }
 
 //===========================================================================================================================================//
