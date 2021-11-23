@@ -393,6 +393,75 @@ int main()
 /* . Altere o programa anterior, intercalando 3 vetores de 10 elementos cada. */ 
 
 // Resposta exercício 11
+#include <stdio.h>
+
+int main()
+{
+    int vet1[10], vet2[10], vet3[10], vet4[30];
+    int i;
+
+    //Ler valores para o primeiro vetor
+    for(i=0; i<10; i++) {
+        printf("Digite um numero: ");
+        scanf("%i", &vet1[i]);
+    }
+    printf("\n");
+
+    //Ler valores para o segundo vetor
+    for(i=0; i<10; i++) {
+        printf("Digite um numero: ");
+        scanf("%i", &vet2[i]);
+    }
+    printf("\n");
+
+        //Ler valores para o terceiro vetor
+    for(i=0; i<10; i++) {
+        printf("Digite um numero: ");
+        scanf("%i", &vet3[i]);
+    }
+    printf("\n");
+
+    //mostra valores para o primeiro vetor
+    printf("Vetor 1: \n");
+    for (i=0; i<10; i++) {
+        printf("%i ", vet1[i]);
+    }
+    printf("\n");
+
+    //mostra valores para o segundo vetor
+    printf("Vetor 2: \n");
+    for (i=0; i<10; i++) {
+        printf("%i ", vet2[i]);
+    }
+    printf("\n");
+
+    //mostra valores para o terceiro vetor
+    printf("Vetor 3: \n");
+    for (i=0; i<10; i++) {
+        printf("%i ", vet3[i]);
+    }
+    printf("\n");
+
+    for (i=0; i<10; i++) {
+        vet4[i*3] = vet1[i];
+    }
+
+    for (i=0; i<10; i++) {
+        vet4[(i*3) + 1] = vet2[i];
+    }
+
+    for (i=0; i<10; i++) {
+        vet4[(i*3) + 2 ] = vet3[i];
+    }
+
+    //mostra valores para o terceiro vetor
+    printf("Final: \n");
+    for (i=0; i<30; i++) {
+        printf("%i ", vet4[i]);
+    }
+
+    return 0;
+}
 
 //===========================================================================================================================================//
 
