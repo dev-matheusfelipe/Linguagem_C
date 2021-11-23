@@ -367,7 +367,6 @@ int main()
  return 0;
 }
 
-
 //===========================================================================================================================================//
 
 // EXERCÍCIO  7 
@@ -378,54 +377,81 @@ diagonal principal. A seguir, a função deve dividir todos os elementos de A pe
 encontrado. A função deve retornar a matriz alterada. */
  
 // Resposta exercício 7
+// declaração de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-    // variaveis
-    int A[8][8];
-    int guardaMaior=0;
-    int soma=0;
-    int reslt=0;
-    int i,j;
+// define uma variavel global que contem o valor 8
+#define TAM 8
+
+float divideMatriz(float matriz[TAM][TAM]) {
     
-    // preenche a matriz gerando valores aleatórios
-    for(i=0; i<8; i++){
-        for(j=0;  j<8; j++){
-            //Gera numeros aleatorios para a matriz
-            A[i][j] = rand() % 10;
-            //Soma cada elemento da matriz
-            soma = soma + A[i][j];
-            //Verifica os numeros digitados somente na matriz Diagonal Principal
-            if( (A[0][0]) && (A[1][1]) && (A[2][2]) && (A[3][3]) && (A[4][4]) && (A[5][5]) && (A[6][6]) && (A[7][7]) > guardaMaior)
-            {
-                guardaMaior=A[i][j];
-            }
+    int l, c;
+    float maior = 0;
+    
+    for(l = 0; l < TAM; l++){
+        for(c = 0;  c < TAM; c++) {
+          if (l == c) {
+              if (matriz[l][c] > maior) {
+                   maior = matriz[l][c];
+                }
+              }
+          }
+    }
+        
+    printf("\nMaior elemento da diagonal principal: %0.2f\n", maior);
+        
+    for(l = 0; l < TAM; l++){
+        for(c = 0;  c < TAM; c++){
+            matriz[l][c] = matriz[l][c]/maior;
         }
     }
     
-    //imprime a matriz completa na tela
-    for(i=0; i<8; i++){
-        for(j=0; j<8; j++){
-            printf("%d ", A[i][j]);
+    return matriz[TAM][TAM];
+}
+
+float preencheMatriz (float matriz[TAM][TAM]) {
+    // preenche a matriz gerando valores aleatórios
+    int l, c;
+    for(l = 0; l < TAM; l++){
+        for(c = 0;  c < TAM; c++){
+            
+            matriz[l][c] = rand() % 100;
+            
         }
-        //Quebra uma linha
+    }
+    
+    return matriz[TAM][TAM];
+}
+
+void imprimeMatriz(float matriz[TAM][TAM]) {
+    
+    int l, c;
+    // imprime a matriz na tela
+    printf("\nMatriz gerada: \n");
+    for(l = 0; l < TAM; l++){
+        for(c = 0;  c < TAM; c++){
+            printf("%0.2f ", matriz[l][c]);
+        }
         printf("\n");
     }
     
-    //imprime a matriz Diagonal Principal na tela
-    printf("%d %d %d %d %d %d %d %d", A[0][0], A[1][1], A[2][2], A[3][3], A[4][4], A[5][5], A[6][6], A[7][7]);
-    //Quebra uma linha
-    printf("\n");
-    
-    //Essa linha pega a soma da matriz e divide pelo maior numero encontrado na Diagonal Principal
-    reslt = soma/guardaMaior;
-    
-    //Escreve uma mensagem para o usuario
-    printf("\nO maior numero encontrado foi: %d \nA matriz gerada divida pelo maior numero e: %d",guardaMaior, reslt);
+}
 
+int main() {
+    
+    float matriz[TAM][TAM];
+
+    matriz[TAM][TAM] = preencheMatriz(matriz);
+    
+    imprimeMatriz(matriz);
+    
+    matriz[TAM][TAM] = divideMatriz(matriz);
+    
+    imprimeMatriz(matriz);
+    
     return 0;
+    
 }
 
 //===========================================================================================================================================//
